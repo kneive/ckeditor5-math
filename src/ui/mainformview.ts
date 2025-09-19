@@ -1,7 +1,7 @@
 import { icons } from 'ckeditor5/src/core';
 import {
 	ButtonView,
-	createLabeledInputText,
+	CreateLabeledTextarea,
 	FocusCycler,
 	LabelView,
 	LabeledFieldView,
@@ -9,7 +9,7 @@ import {
 	SwitchButtonView,
 	View,
 	ViewCollection,
-	type InputTextView,
+	type TextareaView,
 	type FocusableView
 } from 'ckeditor5/src/ui';
 import { Locale, FocusTracker, KeystrokeHandler } from 'ckeditor5/src/utils';
@@ -20,12 +20,12 @@ import type { KatexOptions } from '../typings-external';
 
 const { check: checkIcon, cancel: cancelIcon } = icons;
 
-class MathInputView extends LabeledFieldView<InputTextView> {
+class MathInputView extends LabeledFieldView<TextareaView> {
 	public value: null | string = null;
 	public isReadOnly = false;
 
 	constructor( locale: Locale ) {
-		super( locale, createLabeledInputText );
+		super( locale, createLabeledTextarea );
 	}
 }
 

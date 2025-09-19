@@ -52,7 +52,7 @@ export default class MathView extends View {
 		this.setTemplate( {
 			tag: 'div',
 			attributes: {
-				class: [ 'ck', 'ck-math-preview' ]
+				class: [ 'ck', 'ck-math-preview', 'ck-reset_all-excluded' ]
 			}
 		} );
 	}

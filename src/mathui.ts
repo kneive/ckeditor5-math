@@ -117,6 +117,27 @@ export default class MathUI extends Plugin {
 			cancel();
 		} );
 
+		// Allow pressing Enter to submit changes, and use Shift+Enter to insert a new line
+		formView.keystrokes.set('enter', (data, cancel) => {
+			if (!data.shiftKey) {
+				formView.fire('submit');
+				cancel();
+			}
+		});
+
+		// Allow the textarea to be resizable
+		formView.mathInputView.fieldView.once('render', () => {
+			const textarea = formView.mathInputView.fieldView.element;
+			if (!textarea) return;
+			textarea.focus();
+			Object.assign(textarea.style, {
+				resize: 'both',
+				height: '600px',
+				width: '800', 
+				minWidth: '100%',
+			});
+		});
+
 		return formView;
 	}
 

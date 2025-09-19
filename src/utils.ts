@@ -99,7 +99,6 @@ export async function renderEquation(
 				el => {
 					renderMathJax3( equation, el, display, () => {
 						if ( preview ) {
-							moveAndScaleElement( element, el );
 							el.style.visibility = 'visible';
 						}
 					} );
@@ -120,7 +119,6 @@ export async function renderEquation(
 						if ( preview && isMathJaxVersion2( MathJax ) ) {
 							// eslint-disable-next-line new-cap
 							MathJax.Hub.Queue( () => {
-								moveAndScaleElement( element, el );
 								el.style.visibility = 'visible';
 							} );
 						}
@@ -144,7 +142,6 @@ export async function renderEquation(
 					} );
 				}
 				if ( preview ) {
-					moveAndScaleElement( element, el );
 					el.style.visibility = 'visible';
 				}
 			}
@@ -300,47 +297,7 @@ function getPreviewElement(
 		previewEl.setAttribute( 'id', previewUid );
 		previewEl.classList.add( ...previewClassName );
 		previewEl.style.visibility = 'hidden';
-		global.document.body.appendChild( previewEl );
-
-		let ticking = false;
-
-		const renderTransformation = () => {
-			if ( !ticking ) {
-				global.window.requestAnimationFrame( () => {
-					if ( previewEl ) {
-						moveElement( element, previewEl );
-						ticking = false;
-					}
-				} );
-
-				ticking = true;
-			}
-		};
-
-		// Create scroll listener for following
-		global.window.addEventListener( 'resize', renderTransformation );
-		global.window.addEventListener( 'scroll', renderTransformation );
+		element.appendChild( previewEl );
 	}
 	return previewEl;
-}
-
-function moveAndScaleElement( parent: HTMLElement, child: HTMLElement ) {
-	// Move to right place
-	moveElement( parent, child );
-
-	// Scale parent element same as preview
-	const domRect = child.getBoundingClientRect();
-	parent.style.width = domRect.width + 'px';
-	parent.style.height = domRect.height + 'px';
-}
-
-function moveElement( parent: HTMLElement, child: HTMLElement ) {
-	const domRect = parent.getBoundingClientRect();
-	const left = global.window.scrollX + domRect.left;
-	const top = global.window.scrollY + domRect.top;
-	child.style.position = 'absolute';
-	child.style.left = left + 'px';
-	child.style.top = top + 'px';
-	child.style.zIndex = 'var(--ck-z-panel)';
-	child.style.pointerEvents = 'none';
 }
