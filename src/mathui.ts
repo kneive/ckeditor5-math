@@ -132,8 +132,8 @@ export default class MathUI extends Plugin {
 			textarea.focus();
 			Object.assign(textarea.style, {
 				resize: 'both',
-				height: '600px',
-				width: '800', 
+				height: '200px',
+				width: '400', 
 				minWidth: '100%',
 			});
 		});
