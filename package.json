@@ -1,5 +1,5 @@
 {
-  "name": "@kneive/ckeditor5-math",
+  "name": "@kneive/ckeditor5-math-customized",
   "version": "0.0.1",
   "description": "Math feature for CKEditor 5. Modifications: input, line breaks",
   "keywords": [
