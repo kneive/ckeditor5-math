@@ -12,9 +12,6 @@
     "katex"
   ],
   "homepage": "https://github.com/kneive/ckeditor5-math",
-  "bugs": {
-    "url": ""
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kneive/ckeditor5-math.git"
