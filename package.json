@@ -19,7 +19,7 @@
   "license": "ISC",
   "author": "kneive",
   "type": "git",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "types": "./src/index.d.ts",
   "directories": {
     "test": "tests"
