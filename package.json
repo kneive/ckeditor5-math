@@ -11,16 +11,16 @@
     "ckeditor5-math",
     "katex"
   ],
-  "homepage": "https://github.com/isaul32/ckeditor5-math#readme",
+  "homepage": "https://github.com/kneive/ckeditor5-math",
   "bugs": {
-    "url": "https://github.com/isaul32/ckeditor5-math/issues"
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaul32/ckeditor5-math.git"
+    "url": "git+https://github.com/kneive/ckeditor5-math.git"
   },
   "license": "ISC",
-  "author": "Sauli Anto (og author)",
+  "author": "kneive",
   "type": "git",
   "main": "src/index.ts",
   "types": "./src/index.d.ts",
