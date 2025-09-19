@@ -1,7 +1,7 @@
 import { icons } from 'ckeditor5/src/core';
 import {
 	ButtonView,
-	CreateLabeledTextarea,
+	createLabeledTextarea,
 	FocusCycler,
 	LabelView,
 	LabeledFieldView,
