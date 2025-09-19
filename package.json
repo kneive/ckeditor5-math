@@ -1,5 +1,5 @@
 {
-  "name": "@kneive/ckeditor5-math",
+  "name": "@kneive/ckeditor5-math-customized",
   "version": "43.2.0",
   "description": "Math feature for CKEditor 5. Changed input and line breaks.",
   "keywords": [
@@ -23,6 +23,7 @@
   "author": "Sauli Anto (og author)",
   "type": "git",
   "main": "src/index.ts",
+  "types": "./src/index.d.ts",
   "directories": {
     "test": "tests"
   },
