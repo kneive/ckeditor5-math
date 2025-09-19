@@ -1,6 +1,6 @@
 {
   "name": "@kneive/ckeditor5-math-customized",
-  "version": "0.0.6",
+  "version": "43.2.0",
   "description": "Math feature for CKEditor 5. Modifications: input, line breaks",
   "keywords": [
     "ckeditor",
